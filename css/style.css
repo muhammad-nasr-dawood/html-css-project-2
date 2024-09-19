@@ -487,3 +487,92 @@ header nav .form i{
     top: 1px; /* so the icon code be in the same line with the content that was written inside the li tag */
 }
 /* end design section   */
+
+
+/* start portfolio-section  */
+.portfolio-section{
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.portfolio-section .shuffle{
+    display: flex;
+    justify-content: center; /* horizontal alignment */
+}
+
+.portfolio-section .shuffle li{
+    padding: 10px;
+}
+
+.portfolio-section .shuffle li.active{
+    background-color: var(--main-color);
+    color: white;
+}
+
+.portfolio-section .images-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+.portfolio-section .images-container .img-box{
+    position: relative;
+    overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .portfolio-section .images-container .img-box{
+        flex-basis: 50%;
+    }
+}
+@media (min-width: 1199px) {
+    .portfolio-section .images-container .img-box{
+        flex-basis: 25%;
+    }
+}
+
+
+.portfolio-section .images-container .img-box img{
+    max-width: 100%;
+    transition: 0.3s;
+}
+
+.portfolio-section .images-container .img-box .caption{
+    position: absolute;
+    padding: 20px;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    transition: 0.3s;
+    /* bottom: 0; */
+    bottom: -100%;
+}
+
+.portfolio-section .images-container .img-box:hover .caption{
+    bottom: 0;
+}
+.portfolio-section .images-container .img-box:hover img{
+    transform: rotate(3deg) scale(1.1);
+}
+
+
+.portfolio-section .images-container .img-box .caption h4{
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.portfolio-section .images-container .img-box .caption p{
+    color: var(--main-color);
+}
+
+.portfolio-section .more{
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: var(--main-color);
+    color: white;
+    padding: 15px 20px;
+    display: block;
+    width: fit-content;
+    margin: 30px auto;
+    /* auto to center the element after being block from right and left */
+}
+/* end portfolio-section  */
