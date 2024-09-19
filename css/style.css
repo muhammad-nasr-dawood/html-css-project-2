@@ -389,6 +389,10 @@ header nav .form i{
     .services .srv-box{
         flex-direction: column;
         text-align: center;
+        /* margin-bottom: 80px; */
+
+    }
+    .services .srv-box:not(:last-child) {
         margin-bottom: 80px;
     }
 }
@@ -405,3 +409,75 @@ header nav .form i{
     color: #777;
 }
 /* end services  */
+
+
+
+/* start design section  */
+.design-section{
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    height: 600px;
+    position: relative;
+    background-image: url("../images/design-features.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* here we will do an overlay using a pseudo element */
+.design-section::before{
+    content: "";
+    position: absolute; /* to the landing div */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.60);
+}
+
+.design-section .image, .design-section .design-text{
+    position: relative;
+    z-index: 2;
+    flex: 1; /* so both div will be equally the same in terms of area 
+    and they will grow and shrink with same amount*/
+}
+
+.design-section .image{
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .design-section .image{
+        display: none;
+    }
+}
+
+.design-section .image img{
+    position: relative;
+    bottom: -150px;
+}
+
+.design-section .design-text{
+    color: white;
+    padding: 50px;
+    background-color: var(--transparent-color);
+}
+
+.design-text h2{
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.design-text ul li {
+    padding: 15px 0;
+}
+.design-text ul li::before{
+    font-family: 'Font Awesome 5 Free';
+    content: '\f108';
+    font-weight: 900;
+    margin-right: 20px;
+    position: relative;
+    top: 1px;
+}
+/* end design section   */
