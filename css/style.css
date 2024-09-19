@@ -472,12 +472,18 @@ header nav .form i{
 .design-text ul li {
     padding: 15px 0;
 }
+
+/* how to add an icon using css */
 .design-text ul li::before{
+    /* first add the font family */
     font-family: 'Font Awesome 5 Free';
+    /* then add the unicode for the icon in the content property*/
     content: '\f108';
+    /* add font-weight and make it the maximum weight*/
     font-weight: 900;
     margin-right: 20px;
+    /* margin right to move content that written inside the li 20 px */
     position: relative;
-    top: 1px;
+    top: 1px; /* so the icon code be in the same line with the content that was written inside the li tag */
 }
 /* end design section   */
