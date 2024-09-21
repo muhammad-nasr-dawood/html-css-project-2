@@ -861,3 +861,156 @@ header nav .form i{
     right: -6px;
 }
 /* end skill section  */
+
+/* start quate section */
+.quate-section {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-image: url("../images/quote.jpg");
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.quate-section::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.quate-section .container{
+    position: relative;
+    /* we did that so the container could be above the overlay layer that has been done using the before pseudo element*/
+}
+
+/* we can override the shape of the quate using the below commands */
+.quate-section q{
+    font-family: 'Font Awesome 5 Free'; /* Set font to Font Awesome */
+    font-weight: 600; /* Use font-weight 900 for solid icons */
+    quotes: "\f10d" "\f10e"; /* Set opening and closing quotes to the Font Awesome quote icon */
+    font-size: 15px; /* Adjust size as needed */
+    color: inherit; /* Set color */
+
+    margin-bottom: 20px;
+    display: block;
+    /* so the span element will be in another line not on the same line */
+}
+
+/* end quate section  */
+
+/* start pricing section */
+.pricing-section{
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.pricing-section .plans{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+
+.pricing-section .plan{
+    background-color: #FCFCFC;
+    text-align: center;
+}
+
+.pricing-section .plan .head-plan{
+    padding: 40px 20px;
+    border-top: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+}
+
+.pricing-section .plan .head-plan h3{
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.pricing-section .plan .head-plan span{
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.pricing-section .plan .head-plan span::before{
+    content: "$";
+    font-size: 25px;
+    position: relative;
+    top: -40px;
+    margin-right: 10px;
+    font-weight: normal;
+}
+
+.pricing-section .plan .head-plan span::after{
+    content: "/Mo";
+    font-size: 20px;
+    position: relative;
+    right: -15px;
+    font-weight: normal;
+}
+
+.pricing-section .plan ul{
+    border-bottom: 1px solid var(--main-color);
+}
+.pricing-section .plan ul li{
+    padding: 20px;
+    position: relative;
+}
+
+/* .pricing-section .plan ul li:not(:last-child){
+    position: relative;
+} */
+.pricing-section .plan ul li:not(:last-child)::after{
+    content: "";
+    width: 120px;
+    height: 1px;
+    position: absolute;
+    background-color: var(--main-color);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+}
+
+.pricing-section .plan .foot-plan a{
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 1px solid var(--main-color);
+    width: fit-content;
+    margin: 30px auto;
+    color: black;
+    transition:0.3s;
+}
+.pricing-section .plan .foot-plan a:hover{
+    background-color: var(--main-color);
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.309);
+    color: #FCFCFC;
+}
+
+.pricing-section .contact-text{
+    text-align: center;
+    margin: 50px auto 20px;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.pricing-section  .contact-link{
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.pricing-section  .contact-link:hover{
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.309);
+}
+/* end pricing section */
