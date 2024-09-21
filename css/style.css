@@ -1014,3 +1014,94 @@ header nav .form i{
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.309);
 }
 /* end pricing section */
+
+/* start subscribe-section  */
+.subscribe-section{
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-image: url("../images/subscribe.jpg");
+    background-size: cover;
+    color: white;
+    position: relative;
+}
+
+/* overlay layer */
+.subscribe-section::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.subscribe-section .container{
+    position: relative; /* to make the z-index of that container div above overlay layer */
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 991px) {
+    .subscribe-section .container{
+        flex-direction: column;
+    }
+}
+
+
+.subscribe-section form{
+    display: flex;
+    position: relative;
+    width: 500px;
+    max-width: 100%; /* when the device screen is less than 500px then the new width will be the screen width */
+}
+
+.subscribe-section form i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 25px;
+}
+
+.subscribe-section form input[type="email"]{
+    border: 1px solid white;
+    border-right: none; /* if you cancel the right border you should do it like that */
+    background: none; /* so the email section could be transparent */
+    padding: 20px 20px 20px 60px;
+    caret-color: var(--main-color);
+    /* means the cursor color when you click to begin to write an email the cursor will be colored by the main color */
+    width: calc(100% - 130px);
+}
+
+.subscribe-section form input[type="submit"]{
+    width: 130px;
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-left: none; /* to cancel the left border */
+    text-transform: uppercase;
+}
+
+.subscribe-section form input[type="email"]:focus,
+.subscribe-section form input[type="submit"]:focus{
+    outline: none; /* if you wanna cancel the focus effect */
+}
+
+.subscribe-section form ::placeholder{
+    color: white;
+    /* this is how to change the color of the placeholder */
+}
+
+.subscribe-section p{
+    line-height: 2;
+    margin-left: 50px;
+}
+
+@media (max-width: 991px){
+    .subscribe-section p{
+        margin: 30px 0 0;
+        text-align: center;
+    }
+}
+/* end subscribe-section  */
