@@ -652,3 +652,76 @@ header nav .form i{
     }
 }
 /* end about section  */
+
+/* start stats-section  */
+.stats-section{
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    text-align: center;
+    background-image: url("../images/stats.png");
+    background-size: cover;
+    position: relative;
+}
+
+/* over lay layer */
+.stats-section::before{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.70);
+}
+
+.stats-section .container{
+    position: relative; /*so z-index will be auto and the container will be above the overlay */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.stats-section .container .stats-box{
+    color: white;
+    padding: 50px;
+    background-color: var(--transparent-color);
+}
+
+/* media query using mobile first */
+@media (max-width: 767px) {
+    .stats-section .container .stats-box{
+        flex-basis: 100%; /* start of the 100% of size of the parent div which is here container */
+    }
+}
+
+@media (min-width: 768px) {
+    .stats-section .container .stats-box{
+        flex-basis: 50%; /* start of the 50% of size of the parent div which is here container */
+    }
+}
+
+@media (min-width: 992px) {
+    .stats-section .container .stats-box{
+        flex-basis: 25%; /* start of the 25% of size of the parent div which is here container */
+    }
+}
+
+.stats-section .container .stats-box i{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 30px;
+}
+.stats-section .container .stats-box .number{
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0 0 20px;
+}
+.stats-section .container .stats-box p{
+    font-size: 14px;   
+}
+
+/* end stats-section */
