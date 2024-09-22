@@ -1105,3 +1105,101 @@ header nav .form i{
     }
 }
 /* end subscribe-section  */
+
+
+/* start contact section */
+.contact-section{
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.contact-section .contact-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 767px){
+    .contact-section .contact-content{
+        flex-direction: column;
+    }
+} 
+
+.contact-section .contact-content form{
+    flex-basis: 70%;
+}
+
+.contact-section .contact-content form .main-input{
+    padding: 20px;
+    display: block;
+    border: 1px solid #ccc;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.contact-section .contact-content form .main-input:focus{
+    outline: none; /* to cancel the focus */
+}
+
+.contact-section .contact-content form textarea{
+    height: 200px;
+}
+
+.contact-section .contact-content form input[type="submit"]{
+    background-color: var(--main-color);
+    color: white;
+    padding: 20px;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    /* to move the element to the right without need for using position and so on
+    use the two lines below */
+    display: flex;
+    margin-left: auto;
+}
+
+.contact-content .content-info{
+    flex-basis: 25%;
+}
+
+@media (max-width: 767px){
+    .contact-content .content-info{
+        order: -1; /* so it can surpass the form in order*/
+        text-align: center;
+    }
+} 
+.contact-content .content-info h4{
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.contact-content .content-info .phone{
+    display: block;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+/* it means the second h4 */
+.contact-content .content-info h4:nth-of-type(2){
+    margin-top: 90px;
+}
+
+@media (max-width: 767px){
+    .contact-content .content-info h4:nth-of-type(2){
+       margin-top: 30px;
+    }
+}
+
+
+.contact-content .content-info address{
+    color: #777;
+    line-height: 2;
+}
+
+@media (max-width: 767px){
+    .contact-content .content-info address{
+       margin-bottom: 40px;
+    }
+}
+/* end contact section */
