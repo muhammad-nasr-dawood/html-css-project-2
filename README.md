@@ -1,2 +1,2 @@
 ## Watch the preview through the link below
-[click here](https://cobrastrike72.github.io/html-css-project-2/)
+[click here](https://muhammad-nasr-dawood.github.io/html-css-project-2/)
